@@ -5,10 +5,26 @@ import User from '../../../assets/user.png'
 import { LinearGradient } from 'expo-linear-gradient';
 
 
-export default function Cadastrado({setNomeAlunoGlobal, setTurmaGlobal}){
+export default function Cadastrado({setNomeAlunoGlobal, setCursoGlobal, setNota1Global, setNota2Global}){
 
     const [nomeAluno, setNomeAluno] = useState('')
-    const [turma, setTurma] = useState('')
+    const [curso, setCurso] = useState('')
+    const [nota1, setNota1] =  useState('')
+    const [nota2, setNota2] =  useState('')
+
+    const validacao = () => {
+        if(nomeAluno != '' && curso != '' && nota1 != 0 && nota2 != 0){
+            setNomeAlunoGlobal(nomeAluno)
+            setCursoGlobal(curso)
+            setNota1Global(nota1)
+            setNota2Global(nota2)
+            setNomeAluno('')
+            setCurso('')
+            setNota2('')
+            setNota1('')
+            ToastAndroid.show('Você foi cadastrado com sucesso', ToastAndroid.LONG)
+        }else Alert.alert("Aviso", "Preencha o formulário para cadastrar")
+    }
 
     return(
         <View style={estilos.conteiner}>
@@ -27,18 +43,19 @@ export default function Cadastrado({setNomeAlunoGlobal, setTurmaGlobal}){
                     <TextInput style={estilos.input} value={nomeAluno} onChangeText={text=> setNomeAluno(text)}/>
                 </View>
                 <View style={estilos.label}>
-                    <Text style={estilos.texto}>Escola</Text>
-                    <TextInput style={estilos.input} value={turma} onChangeText={text=> setTurma(text)}/>
+                    <Text style={estilos.texto}>Curso</Text>
+                    <TextInput style={estilos.input} value={curso} onChangeText={text=> setCurso(text)}/>
                 </View>
-                <TouchableOpacity style={estilos.botao} onPress={()=> {
-                    if(nomeAluno != '' && turma != ''){
-                        setNomeAlunoGlobal(nomeAluno)
-                        setTurmaGlobal(turma)
-                        setNomeAluno('')
-                        setTurma('')
-                        ToastAndroid.show('Você foi cadastrado com sucesso', ToastAndroid.LONG)
-                    }else Alert.alert("Aviso", "Preencha o formulário para cadastrar")
-                }}>
+                <View style={estilos.label}>
+                    <Text style={estilos.texto}>Nota 1</Text>
+                    <TextInput style={estilos.input} value={nota1} onChangeText={text=> setNota1(text)} keyboardType="numeric"/>
+                </View>
+                <View style={estilos.label}>
+                    <Text style={estilos.texto}>Nota 2</Text>
+                    <TextInput style={estilos.input} value={nota2} onChangeText={text=> setNota2(text)} keyboardType="numeric"/>
+                </View>
+
+                <TouchableOpacity style={estilos.botao} onPress={() => validacao()}>
                     <Text style={estilos.textoBotao}>Cadastrar</Text>
                 </TouchableOpacity>
             </View>

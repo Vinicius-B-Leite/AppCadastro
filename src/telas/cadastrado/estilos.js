@@ -15,13 +15,13 @@ export default StyleSheet.create({
         right: 0
     },
     imagem:{
-        width: '60%',
+        width: '50%',
         resizeMode: 'contain',
         alignSelf: 'center',
         tintColor: '#ffffff'
     },
     form:{
-        margin: 20,
+        marginHorizontal: 20,
         padding: 20,
         justifyContent: 'center',
         alignItems: 'center',
@@ -31,7 +31,7 @@ export default StyleSheet.create({
     label:{
         width: '100%',
         flexDirection: 'column',
-        paddingBottom: 40
+        paddingBottom: 10
     },
     texto:{
         fontSize: 20,
@@ -42,7 +42,8 @@ export default StyleSheet.create({
         borderBottomColor: '#302399',
         width: '100%',
         paddingLeft: 5,
-        paddingBottom: 3
+        paddingBottom: 3,
+        fontSize: 18
     },
     botao:{
         padding: 10,

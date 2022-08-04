@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
     conteiner:{
         width: '100%',
-        height: '100%'
+        height: '100%',
     },
     background:{
         position: 'absolute',
@@ -16,7 +16,9 @@ export default StyleSheet.create({
     imagem:{
         resizeMode: 'contain',
         tintColor: '#ffffff',
-        alignSelf: 'center'
+        alignSelf: 'center',
+        width: '35%',
+        height: '35%'
     },
     nome:{
         color: '#ffffff',
@@ -35,7 +37,7 @@ export default StyleSheet.create({
         borderBottomWidth: 3
     },
     coluna:{
-        width: '30%',
+        width: '35%',
         alignItems: 'center'
     },
     statusTitulo:{
@@ -44,8 +46,20 @@ export default StyleSheet.create({
         fontWeight: 'bold',
         lineHeight: 30
     },
-    statusDescricao:{
+    statusDescricaoAprovado:{
+        color: 'green',
         fontSize: 18,
+        fontWeight: 'bold'
+    },
+    statusDescricaoReprovado:{
+        color: 'red',
+        fontSize: 18,
+        fontWeight: 'bold'
+    },
+    statusDescricaoRecuperacao:{
+        color: '#ffe135',
+        fontSize: 18,
+        fontWeight: 'bold'
     },
     descricao:{
         padding: 20
