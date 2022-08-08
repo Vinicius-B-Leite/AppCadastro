@@ -1,12 +1,34 @@
-<h1>Aplicativo Cadastro</h1>
-<p>Este aplicativo foi desenvolvido em <strong>React Native</strong> com o objetivo de realizar a tarefa passada na aula de Programação Mobile 1 do curso Desenvolvimento de Sistemas da Etec.</p>
+# Cadastro de aluno
+Este foi um pequeno projeto passado como tarefa no curso de programação mobile da Etec. O objetivo deste projeto é passar informaçãoes de uma tela para outra, no caso o nome, o curso e as notas. 
 
-<h2>Funcionalidades</h2>
-<p>O projeto possui o cadastro de um aluno e as informações passadas vão para a tela de perfil. Não foi usado nenhum sistema de armazenagem de dados, somente a transferência de dados através de variáveis.</p>
+![apresentação do app](github/WhatsApp-Video-2022-08-08-at-12.53.30.gif)
 
-<img src="github/animacao.gif" />
+## Tecnologias
+>
+Aqui está as tecnologias usadas no projeto
 
-<h3>Como utilizar</h3>
-<p>No projeto há uma pasta chamada apk e nela eu disponibilizei o apk do aplicativo para que possam testar em seus celulares</p>
+ - Expo 45.0.0
+ - React navigation drawer 6.4.3
+ 
+ ## Serviços usados
+  
+  - Github
 
-<h4>Feito por Vinicius Buava Leite</h4>
+## Como usar
+A pasta apk contém o apk da aplicação para que possam testar em seus celulares
+
+## Funcionalidades
+
+As principais funcionalidades são:
+ - Transportar informações passados pelo usuário para outra tela através de useState
+
+## Links
+ - Repositório: https://github.com/Vinicius-B-Leite/AppCadastro
+ - Em casos de bugs, por favor me contate
+  viniciusbleite21@gmail.com
+
+## Versão
+ 1.0.0
+
+## Autor
+Feito com <3 por Vinicius B. Leite
